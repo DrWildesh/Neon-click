@@ -30,9 +30,15 @@
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         </config-file>
 
-        <!-- Custom App Icon Mapping -->
-        <icon src="icon.png" />
-        <resource-file src="splash.png" target="app/src/main/res/drawable/screen.png" />
+        <!-- Global configuration for icon and splash screen -->
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" /> <!-- Shows for 3 seconds -->
+    <preference name="AutoHideSplashScreen" value="true" />
+
+    <platform name="android">
+        <!-- Directs the builder to use your root res/ folder assets -->
+        <icon src="res/icon.png" />
+        <splash src="res/splash.png" />
     </platform>
 
     <!-- 2. Official AdMob SDK Native Integration Plugin -->
